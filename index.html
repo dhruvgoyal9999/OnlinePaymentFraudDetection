@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Online Payment Fraud Detection</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+  <link rel="icon" href="dogi.ico">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <section id="title">
+    <div class="container-fluid">
+
+      <!-- Navigaion Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">Online Payment Fraud Detection</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#title">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#prediction">Predict</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dataset">Dataset</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>CatchFraud</h1>
+            <br>
+            <h4>Thank you for visiting our website,
+              Online Payments Fraud Detection Using ML employs machine learning to combat online payment fraud. By analyzing transaction data, the model accurately classifies transactions as fraudulent or authentic,
+              uncovering patterns leading to fraud. Our goal is to provide individuals and companies with tools for secure digital payments.</h4>
+          <button type="button" class="btn btn-dark d-btn" onclick="location.href='#prediction'"></a><i class="fa-solid fa-magnifying-glass-dollar"></i> Predict</button>
+          <button type="button" class="btn btn-outline-light d-btn" onclick="location.href='#dataset'"><i class="fa-solid fa-database"></i> Dataset</button>
+        </div>
+        <div class="col-lg-6">
+          <img  class="title-img"   src="{{ url_for('static', filename='images/detective.png') }}" alt="A detective illustration">
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Instructions -->
+
+  <section id="instructions">
+    <div class="row">
+        <i class="icon fas fa-check-circle fa-4x"></i>
+        <h3>General Instructions</h3>
+        <br>
+        <br>
+        <br>
+        <p>Here are some instructions for prevention from Online Fraud
+          <br>
+          <br>
+          1. Research the website and company:
+          Before you provide any personal information or money, it is important to make sure that the website and company are legitimate. You can do this by searching for online reviews, checking the company's website for contact information, and verifying that the website is registered with a reputable domain registrar.
+          <br>
+          <br>
+          2. Be cautious of unsolicited emails or messages:
+          If you receive an email or message from someone claiming to be from a company you are interested in enlisting with, be cautious. Do not click on any links or open any attachments in the message without first verifying that they are legitimate. You can do this by contacting the company directly through their website or a known phone number.
+          <br>
+          <br>
+          3. Never give out your personal information or financial information to someone you do not know and trust:
+          Companies should never ask for your personal information, such as your Social Security number, bank account information, or credit card number, before you have been accepted into their program. If you are asked for this information, it is a red flag that the company may be fraudulent.
+          <br>
+          <br>
+          4. Be skeptical of offers that sound too good to be true:
+          If you are offered a job or enlistment opportunity that seems too good to be true, it probably is. Do not be afraid to walk away from any offer that seems suspicious or if you are not comfortable with the terms.
+          <br>
+          <br>
+          5. Use a secure payment method:
+          If you do need to pay a fee to enlist with a company, make sure you use a secure payment method, such as a credit card or PayPal. Do not wire money or send gift cards to anyone, as these are common payment methods used by scammers.
+          <br>
+          <br>
+          6. Report any fraudulent activity to the authorities:
+          If you believe that you have been the victim of online fraud, you should report it to the authorities. You can contact the Federal Trade Commission (FTC) at 1-877-FTC-HELP (1-877-382-4357) or file a complaint online at ReportFraud.ftc.gov.
+          </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="testimonial-text">CatchFraud is a great fraud detection tool for businesses of all sizes. It's easy to use and has a wide range of features.</h2>
+          <img class="testimonial-image" src="{{ url_for('static', filename='images/boy.png') }}" alt="profile">
+          <em>Harsh, India</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">It's a quick and easy way to spot online frauds.I would highly recommend CatchFraud to any business that wants to protect itself from fraud.</h2>
+          <img class="testimonial-image" src="{{ url_for('static', filename='images/woman.png') }}" alt="profile">
+          <em>Jasmine, India</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">It's easy to use and integrates seamlessly with our existing systems. I've been impressed with CatchFraud's accuracy, and it's helped me to reduce my fraud losses.</h2>
+          <img class="testimonial-image" src="{{ url_for('static', filename='images/boy.png') }}" alt="profile">
+          <em>Navaan, India</em>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- Prediction -->
+
+  <section id="prediction">
+
+    <h2>Predict</h2>
+    <p class="prcg">Input transaction details here and get prediction about payment is safe or fraud.</p>
+    <div class="row">
+
+    <form action="/login" method="post" class="mx-auto">
+        <label for="Step"><b>STEP</b></label>
+        <br>
+        <br>
+        <input type="number" class="form-control mx-auto" name="Step" required>
+        <br>
+        <br>
+        <label for="Type"><b>TYPE</b></label>
+        <br>
+        <br>
+        <select class="form-select" name="Type">
+            <option>PAYMENT</option>
+            <option>TRANSFER</option>
+            <option>CASH OUT</option>
+            <option>DEBIT</option>
+            <option>CASH IN</option>
+          </select>
+        <br>
+        <br>
+        <label for="Amount"><b>AMOUNT</b></label>
+        <br>
+        <br>
+        <input type="number" class="form-control mx-auto" name="Amount" required>
+        <br>
+        <br>
+        <label for="OldbalanceOrg" placeholder="Balance before Transaction"><b>OLD BALANCE ORG</b></label>
+        <br>
+        <br>
+        <input type="number" class="form-control mx-auto" name="OldbalanceOrg" required>
+        <br>
+        <br>
+        <label for="NewbalanceOrg" placeholder="Balance after Transaction"><b>NEW BALANCE ORG</b></label>
+        <br>
+        <br>
+        <input type="number" class="form-control mx-auto" name="NewbalanceOrg" required>
+        <br>
+        <br>
+        <label for="OldbalanceDest" aria-placeholder="Initial Balance of recipient before transaction"><b>OLD BALANCE DEST</b></label>
+        <br>
+        <br>
+        <input type="number" class="form-control mx-auto" name="OldbalanceDest" required>
+        <br>
+        <br>
+        <label for="NewbalanceDest" aria-placeholder="Initial Balance of recipient after transaction"><b>NEW BALANCE DEST</b></label>
+        <br>
+        <br>
+        <input type="number" class="form-control mx-auto" name="NewbalanceDest" required>
+        <br>
+        <br>
+        <button class="btn btn-dark text-light" type="submit"><i class="fa-solid fa-share-from-square"></i> <b>SUBMIT</b></button>
+
+    </form>
+    </div>
+  </section>
+
+
+  <!-- Dataset -->
+
+  <section id="dataset">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="ftr">Explore the Dataset by clicking on Dataset button below.</h3>
+        <button type="button" class="btn btn-dark d-btnn btn-lg" onclick="location.href='https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset'"><i class="fa-solid fa-database"></i> Dataset</button>
+        <button type="button" class="btn btn-light d-btnn btn-lg" onclick="location.href='#testimonials'"><i class="fa-solid fa-user"></i> Reviews</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <div class="ftr-logo">
+      <i class="fab fa-twitter ft-logo"></i>
+      <i class="fab fa-facebook-f ft-logo"></i>
+      <i class="fab fa-instagram ft-logo"></i>
+      <i class="fas fa-envelope ft-logo"></i>
+    </div>
+
+    <p>© Copyright CatchFraud</p>
+
+  </footer>
+
+
+</body>
+
+</html>
