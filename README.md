@@ -7,7 +7,7 @@ transactions. However, this increase in utilisation has also resulted in an incr
 Detecting these scams is difficult, as different approaches have variable degrees of accuracy and their 
 own set of limitations. Monitoring transaction behaviour for any deviations is necessary for predicting 
 and resolving fraud. Given the large quantity of data involved, the suggested solution addresses the 
-credit/debit card fraud detection issue.
+credit/debit card fraud detection issue
 Classification methods such as Decision Trees, Random Forest, SVM, Extra Tree Classifier, and XGBoost 
 Classifier are used in our strategy. We intend to determine the most successful model through 
 rigorous training and testing. Once the best model has been found, it will be stored in pkl format. 
